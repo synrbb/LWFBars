@@ -19,7 +19,7 @@
       <filledsprite depth="5" name="BarContent" color="{xpcolor}" width="169" type="filled" fill="{xp}"/>
       <sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_trophy" size="35,35" pos="26,-24" pivot="center" foregroundlayer="true"/>
       <label depth="7" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="Lv {playerlevel}" width="125" height="35"/>
-      <label depth="8" pos="166,-23" font_size="22" color="[white]" justify="right" pivot="right" text="({skillpoints})" visible="{skillpointsvisible}"/>
+      <label depth="8" pos="26,-23" font_size="22" style="outline" justify="center" pivot="center" text="[FFB400]{skillpoints}[-]" visible="{skillpointsvisible}"/>
 
       <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
       <filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="1"/>
