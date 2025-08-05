@@ -6,17 +6,6 @@ namespace LWFBars
 
         private readonly CachedStringFormatterInt SkillPointsFormatter = new();
  
-        public override void Update(float _dt)
-        {
-            base.Update(_dt);
-
-            GUIWindowManager windowManager = xui.playerUI.windowManager;
-
-            ViewComponent.IsVisible = !localPlayer.IsDead()
-                && !windowManager.IsFullHUDDisabled()
-                && (xui.dragAndDrop.InMenu || !windowManager.IsHUDPartialHidden());
-        }
-
         public override bool GetBindingValue(ref string value, string bindingName)
         {
             switch (bindingName)
