@@ -4,6 +4,18 @@ namespace LWFBars
 {
     public class XUiC_FoodWaterBar : XUiC_HUDStatBar
     {
+        public override void Update(float _dt)
+        {
+            base.Update(_dt);
+
+            if ((StatType == HUDStatTypes.Food || StatType == HUDStatTypes.Water)
+                && LocalPlayer.IsDead()
+                && ViewComponent.IsVisible)
+            {
+                RefreshBindings(_forceAll: true);
+            }
+        }
+
         public override bool GetBindingValue(ref string value, string bindingName)
         {
             if (bindingName == "statcurrentwithmax")
