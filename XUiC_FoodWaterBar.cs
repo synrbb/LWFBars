@@ -14,14 +14,18 @@ namespace LWFBars
                         if (LocalPlayer != null)
                         {
                             Stat stat = LocalPlayer.Stats.Food;
-                            value = statcurrentWMaxFormatterAOfB.Format((int)Math.Round(stat.Value), (int)Math.Round(stat.Max));
+                            value = statcurrentWMaxFormatterAOfB.Format(
+                                (int)Math.Round(stat.Value, MidpointRounding.AwayFromZero),
+                                (int)Math.Round(stat.Max, MidpointRounding.AwayFromZero));
                         }
                         return true;
                     case HUDStatTypes.Water:
                         if (LocalPlayer != null)
                         {
                             Stat stat = LocalPlayer.Stats.Water;
-                            value = statcurrentWMaxFormatterAOfB.Format((int)Math.Round(stat.Value), (int)Math.Round(stat.Max));
+                            value = statcurrentWMaxFormatterAOfB.Format(
+                                (int)Math.Round(stat.Value, MidpointRounding.AwayFromZero),
+                                (int)Math.Round(stat.Max, MidpointRounding.AwayFromZero));
                         }
                         return true;
                 }
